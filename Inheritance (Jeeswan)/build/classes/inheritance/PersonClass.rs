@@ -1,0 +1,3 @@
+inheritance.Student
+inheritance.Person
+inheritance.PersonClass

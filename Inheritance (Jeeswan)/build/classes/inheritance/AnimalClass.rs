@@ -1,0 +1,3 @@
+inheritance.Dog
+inheritance.Animal
+inheritance.AnimalClass

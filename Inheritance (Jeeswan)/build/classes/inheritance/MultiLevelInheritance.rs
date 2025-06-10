@@ -1,0 +1,4 @@
+inheritance.MultiLevelInheritance
+inheritance.Animal
+inheritance.LivingBeing
+inheritance.Bird
