@@ -8,12 +8,14 @@ package inheritance;
  *
  * @author wildflower
  */
+// Base class
 class Vehicle {
     void start() {
         System.out.println("Vehicle started");
     }
 }
 
+// Derived class
 class Car extends Vehicle {
     void playMusic() {
         System.out.println("Playing music in the car");
@@ -23,9 +25,7 @@ class Car extends Vehicle {
 public class VehicleClass {
     public static void main(String[] args) {
         Car myCar = new Car();
-
-        myCar.start();
-
-        myCar.playMusic();
+        myCar.start();        
+        myCar.playMusic(); 
     }
 }

@@ -15,8 +15,8 @@ class LivingBeing {
 }
 
 class Animal extends LivingBeing {
-    void walk() {
-        System.out.println("Animal is walking");
+    void eat() {
+        System.out.println("Animal is eating");
     }
 }
 
@@ -28,10 +28,10 @@ class Bird extends Animal {
 
 public class MultiLevelInheritance {
     public static void main(String[] args) {
-        Bird b = new Bird();
+        Bird myBird = new Bird();
 
-        b.breathe();
-        b.walk();
-        b.fly();
+        myBird.breathe(); 
+        myBird.eat();    
+        myBird.fly(); 
     }
 }
