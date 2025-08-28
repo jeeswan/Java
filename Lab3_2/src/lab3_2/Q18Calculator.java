@@ -45,7 +45,7 @@ public class Q18Calculator extends JFrame implements ActionListener{
         add(mulBtn);
         add(result);
         
-        setSize(500, 500);
+        setSize(500, 300);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setVisible(true);

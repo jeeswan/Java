@@ -31,6 +31,6 @@ public class Q4aMethodOverloading {
 
         obj.greet();                       // no-arg
         obj.greet("Jeeswan");              // one-arg
-        obj.greet("Jeeswan", 3);           // two-arg
+        obj.greet("Jeeswan", 1);           // two-arg
     }
 }

@@ -14,7 +14,7 @@ import java.awt.*;
 public class Q16dGridBagLayout {
     public static void main(String[] args) {
         JFrame frame = new JFrame("GridBagLayout Example");
-        frame.setSize(500, 500);
+        frame.setSize(300, 300);
         frame.setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
 

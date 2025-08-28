@@ -10,7 +10,7 @@ package LAb3_1;
  */
 public class Q5bStaticMethod {
     static void greet(){
-        System.out.println("Hello from static metjod!");
+        System.out.println("Hello from static method!");
     }
     
     public static void main(String[] args){

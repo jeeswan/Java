@@ -16,7 +16,7 @@ import java.io.*;
 public class Q14gFileWriter {
     public static void main(String[] args) throws IOException{
         FileWriter fw = new FileWriter("output.txt");
-        fw.write("This is written using FileWriter.");
+        fw.write("This is written using FileWriter.\n-Jeeswan Bajracharya");
         fw.close();
     }
 }
