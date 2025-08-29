@@ -9,6 +9,7 @@ package lab3_3;
  * @author wildflower
  */
 import java.sql.*;
+import java.util.Scanner;
 
 public class Q27ReadTable {
     public static void main(String[] args) {
@@ -18,29 +19,54 @@ public class Q27ReadTable {
 
         try {
             Connection con = DriverManager.getConnection(url, user, pass);
-
-            // Statement
             Statement st = con.createStatement();
 
-            // Query
-            ResultSet rs = st.executeQuery("SELECT * FROM students");
+            // ---------- Q28: Insert a hardcoded row ----------
+            String sqlHard = "INSERT INTO students (id, name, age, course) " +
+                             "VALUES (1001, 'Jeeswan', 20, 'Java')";
+            st.executeUpdate(sqlHard);
+            System.out.println("1 row inserted successfully.");
 
-            // Print
+            // ---------- Q29: Insert a row from console ----------
+            Scanner sc = new Scanner(System.in);
+            System.out.print("Enter ID: ");
+            int id = sc.nextInt();
+            sc.nextLine(); // consume newline
+
+            System.out.print("Enter Name: ");
+            String name = sc.nextLine();
+
+            System.out.print("Enter Age: ");
+            int age = sc.nextInt();
+            sc.nextLine(); // consume newline
+
+            System.out.print("Enter Course: ");
+            String course = sc.nextLine();
+
+            String sqlUser = "INSERT INTO students (id, name, age, course) " +
+                             "VALUES (" + id + ", '" + name + "', " + age + ", '" + course + "')";
+            st.executeUpdate(sqlUser);
+            System.out.println("User row inserted successfully.");
+
+            // ---------- Q27: Read and display all rows ----------
+            ResultSet rs = st.executeQuery("SELECT * FROM students");
+            System.out.println("\n--- Student Table ---");
             System.out.println("ID\tName\tAge\tCourse");
             while (rs.next()) {
-                int id = rs.getInt("id");
-                String name = rs.getString("name");
-                int age = rs.getInt("age");           // column "age"
-                String course = rs.getString("course"); // column "course"
-                System.out.println(id + "\t" + name + "\t" + age + "\t" + course);
+                int rid = rs.getInt("id");
+                String rname = rs.getString("name");
+                int rage = rs.getInt("age");
+                String rcourse = rs.getString("course");
+                System.out.println(rid + "\t" + rname + "\t" + rage + "\t" + rcourse);
             }
 
-            // Close
+            // close
             rs.close();
             st.close();
             con.close();
+            sc.close();
 
-        } catch (Exception e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }

@@ -8,7 +8,7 @@ import java.util.Scanner;
  *
  * @author wildflower
  */
-class Student{
+class Students{
     int roll_no;
     
     void readRollNo(){
@@ -23,7 +23,7 @@ class Student{
     }
 }
 
-class Test extends Student{
+class Tests extends Students{
     int marks1, marks2;
     
     void readMarks(){
@@ -41,7 +41,7 @@ class Test extends Student{
     }
 }
 
-class Result extends Test{
+class Results extends Tests{
     int total;
     
     void calculateTotal(){
@@ -57,15 +57,15 @@ public class Q6Inheritance {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         
-        Result student1 = new Result();
+        Results students1 = new Results();
         
-        student1.readRollNo();
-        student1.readMarks();
-        student1.calculateTotal();
+        students1.readRollNo();
+        students1.readMarks();
+        students1.calculateTotal();
         
         System.out.println("\n---Student Report---");
-        student1.displayRollNo();
-        student1.displayMarks();
-        student1.displayTotal();
+        students1.displayRollNo();
+        students1.displayMarks();
+        students1.displayTotal();
     }
 }

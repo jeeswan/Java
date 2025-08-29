@@ -57,7 +57,7 @@ public class Q31PreparedStatement {
                         pstInsert.setInt(3, age);
                         pstInsert.setString(4, course);
                         int rowsInserted = pstInsert.executeUpdate();
-                        System.out.println(rowsInserted + "record(s) inserted.");
+                        System.out.println(rowsInserted + " record(s) inserted.");
                         pstInsert.close();
                         break;
                         
@@ -91,11 +91,11 @@ public class Q31PreparedStatement {
                         
                         String updateSQL = "UPDATE students1 SET age=?, course=? WHERE id=?";
                         PreparedStatement pstUpdate = con.prepareStatement(updateSQL);
-                        pstUpdate.setInt(1, updid);
-                        pstUpdate.setInt(3, updage);
-                        pstUpdate.setString(4, updcourse);
+                        pstUpdate.setInt(1, updage);
+                        pstUpdate.setString(2, updcourse);
+                        pstUpdate.setInt(3, updid);                 
                         int rowsUpdated = pstUpdate.executeUpdate();
-                        System.out.println(rowsUpdated + "record(s) updated.");
+                        System.out.println(rowsUpdated + " record(s) updated.");
                         pstUpdate.close();
                         break;
                         
@@ -108,7 +108,7 @@ public class Q31PreparedStatement {
                         PreparedStatement pstDelete = con.prepareStatement(deleteSQL);
                         pstDelete.setInt(1, delID);
                         int rowsDeleted = pstDelete.executeUpdate();
-                        System.out.println(rowsDeleted + "record(s) deleted.");
+                        System.out.println(rowsDeleted + " record(s) deleted.");
                         pstDelete.close();
                         break;
                         
